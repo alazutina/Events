@@ -27,7 +27,7 @@ public class AppRunner {
         System.out.println(fileController.getById(1l));
      System.out.println(fileController.getAll());
 
-     // fileController.deleteById(6l);
+     // fileController.deleteById(2l);
 
         System.out.println(fileController.getAll());
 
@@ -57,24 +57,24 @@ public class AppRunner {
 
         Event event = new Event();
 
-        event.setUser(userController.getById(7l));
-        event.setFile(fileController.getById(7l));
+        event.setUser(userController.getById(1l));
+        event.setFile(fileController.getById(1l));
         event.setAction("открытие");
         eventController.save(event.getAction(),event.getFile(),event.getUser());
 
-        System.out.println("! "+eventController.getAll());
-    //    eventController.deleteById(42l);
+       System.out.println("! "+eventController.getAll());
+ //  eventController.deleteById(3l);
+        System.out.println("!! "+eventController.getAll());
 
-      Event event1 = eventController.getById(43l);
+      Event event1 = eventController.getById(5l);
       event1.setAction("закрытие");
       eventController.update(event1.getId(),event1.getAction(),event1.getFile(),event1.getUser());
+        System.out.println("!!! "+eventController.getAll());
 
-
-        System.out.println("!! "+eventController.getAll());
-        System.out.println(userController.getAll());
-        System.out.println(fileController.getAll());
-
-        System.out.println(eventController.getById(44l));
+//        System.out.println(userController.getAll());
+//        System.out.println(fileController.getAll());
+//
+        System.out.println(eventController.getById(4l));
 
         System.exit(0);
     }
